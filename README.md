@@ -234,7 +234,7 @@ Route::fallback(function() {
 ```bash
 #in env file modifica chiave
 
-FILESYSTEM_DRIVER=public
+FILESYSTEM_DISK=public
 
 #Caricheremo i nostri file nella cartella storage/app/public,
 # modifichiamo quindi in config/filestystems.php
