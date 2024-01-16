@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Project;
+use App\Models\Category;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests\StoreProjectRequest;
@@ -40,7 +42,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $categories = Category::all();
+        return view('admin.projects.create', compact('categories'));
 
     }
 
@@ -86,6 +89,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
+
+        $categories = Category::all();
+
         return view('admin.projects.edit', compact('project'));
 
     }

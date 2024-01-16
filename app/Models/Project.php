@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id', 'title', 'slug', 'link', 'image', 'description',];
+    protected $fillable = ['user_id', 'title', 'slug', 'link', 'image', 'description', 'category_id'];
 
 
     public function user()
