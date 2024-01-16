@@ -8,10 +8,16 @@
                 </div>
             @endif
             <div class="card-body">
-                <h1>{{ $project->title }}</h1>
+                <div class="d-flex align-items-start">
+                    <h1 class="me-2">{{ $project->title }}</h1>
+                    <span class="badge {{ $project->category ? 'text-bg-warning' : 'text-bg-danger' }}">
+                        {{ $project->category ? $project->category->name : 'Uncategorized' }}
+                    </span>
+
+                </div>
+
                 <h3><a href="{{ $project->link }}">{{ $project->link }}</a></h3>
                 <p>{{ $project->description }}</p>
-                <span>{{ $project->category ? $project->category->name : 'Uncategorized' }}</span>
 
             </div>
 

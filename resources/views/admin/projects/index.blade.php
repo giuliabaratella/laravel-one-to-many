@@ -42,7 +42,8 @@
                             <thead>
                                 <tr>
                                     <th>Title</th>
-                                    <th class="d-none d-lg-table-cell">Link</th>
+                                    <th class="d-none d-xl-table-cell">Link</th>
+                                    <th class="d-none d-lg-table-cell">Category</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
@@ -55,10 +56,17 @@
                                                 {{ $project->title }}
                                             </a>
                                         </th>
-                                        <td class="d-none d-lg-table-cell">
+                                        <td class="d-none d-xl-table-cell">
                                             <a href="{{ $project->link }}">
                                                 {{ $project->link }}
                                             </a>
+                                        </td>
+                                        <td class="d-none d-lg-table-cell">
+
+                                            <span
+                                                class="badge {{ $project->category ? 'text-bg-warning' : 'text-bg-danger' }}">
+                                                {{ $project->category ? $project->category->name : 'Uncategorized' }}
+                                            </span>
                                         </td>
                                         <td><a href="{{ route('admin.projects.edit', $project->slug) }}">
                                                 <button class="btn btn-success rounded-3 border-0">
