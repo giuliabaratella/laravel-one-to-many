@@ -81,8 +81,8 @@
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">Category</label>
 
-                                    <select class="form-control" id="category_id" name="category_id"
-                                        class="form-control @error('category_id') is-invalid @enderror">
+                                    <select id="category_id" name="category_id"
+                                        class="form-select @error('category_id') is-invalid @enderror">
                                         <option value="">Select a category</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"
