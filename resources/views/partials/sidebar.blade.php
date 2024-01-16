@@ -17,7 +17,7 @@
 
                 </li>
                 <li>
-                    <a class="nav-link" href="{{ route('admin.projects.create') }}">Add a new project</a>
+                    <a class="nav-link" href="{{ route('admin.categories.index') }}">Categories</a>
 
                 </li>
             @endguest
