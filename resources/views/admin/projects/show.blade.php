@@ -11,6 +11,7 @@
                 <h1>{{ $project->title }}</h1>
                 <h3><a href="{{ $project->link }}">{{ $project->link }}</a></h3>
                 <p>{{ $project->description }}</p>
+                <span>{{ $project->category ? $project->category->name : 'Uncategorized' }}</span>
 
             </div>
 

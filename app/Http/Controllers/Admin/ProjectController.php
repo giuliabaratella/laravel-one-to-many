@@ -92,7 +92,7 @@ class ProjectController extends Controller
 
         $categories = Category::all();
 
-        return view('admin.projects.edit', compact('project'));
+        return view('admin.projects.edit', compact('project', 'categories'));
 
     }
 
